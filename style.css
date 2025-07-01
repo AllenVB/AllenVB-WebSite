@@ -1,0 +1,872 @@
+/* Genel ayarlar */
+body {
+  background-color: #ffffff;
+  color: #b30000;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #b30000;
+  padding: 1rem;
+}
+
+.custom-navbar .dropdown-menu {
+  background-color: #fff0f0;
+}
+
+.custom-navbar .dropdown-item {
+  color: #b30000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #fff !important;
+  color: #b30000 !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: #fff0f0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-content a:hover {
+  background-color: #fff0f0;
+  color: #b30000;
+  border-left: 3px solid #b30000;
+  padding-left: 20px;
+}
+
+.dropdown-content a:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dropdown-content a:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.dropdown-content::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  border-radius: 6px !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  padding-right: 40px !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease !important;
+}
+
+.search-input:hover {
+  background-color: #fff !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(179, 0, 0, 0.25) !important;
+  background-color: #fff !important;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b30000;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+/* Orta içerik */
+.main-content {
+  height: 600px;
+  background-color: #f0f2f5;
+  padding: 10px !important;
+  margin-bottom: 25px !important;
+}
+
+.left-side {
+  background-color: #fff0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-side .nav-link {
+  color: #2d3436;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  border-left: 3px solid transparent;
+}
+
+.left-side .nav-link:hover {
+  background-color: #c5d0e0;
+  color: #1e272e;
+  transform: translateX(5px);
+  border-left: 3px solid #2d3436;
+}
+
+.middle-side {
+  background-color: #f5f6fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-box {
+  text-align: center;
+  color: #b30000;
+}
+
+.content-box h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.right-side {
+  background-color: #fff0f0;
+  padding: 5px !important;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.personal-info {
+  padding-left: 10px;
+  padding-top: 30px;
+  margin-bottom: 120px !important;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #b30000;
+}
+
+/* Kişisel bilgi ile sosyal medya arası boşluk */
+.social-media {
+  margin-top: 50px;
+}
+
+.social-media li {
+  margin-bottom: 20px;
+}
+
+.social-link {
+  color: #b30000;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link:hover {
+  color: #b30000;
+  background-color: #fff0f0;
+  transform: translateX(5px);
+  box-shadow: 0 2px 4px rgba(179, 0, 0, 0.1);
+}
+
+.social-link i {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover i {
+  transform: scale(1.2);
+  color: #b30000;
+}
+
+/* Sağ taraf görsel stili */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #b30000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0;
+}
+
+.footer-top {
+  padding: 40px 0;
+  background-color: #444;
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  background-color: #333;
+}
+
+.footer h5 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #b30000;
+}
+
+.footer .bi {
+  margin-right: 10px;
+  color: #b30000;
+}
+
+.comment-form input,
+.comment-form textarea {
+  background-color: #555;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+  color: #aaa;
+}
+
+.comment-form .btn-light {
+  background-color: #b30000;
+  border: none;
+  color: #fff;
+}
+
+.comment-form .btn-light:hover {
+  background-color: #8c0000;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b30000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* Giriş Sayfası Stilleri */
+.login-card {
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.login-card .card-title {
+  color: #333;
+  font-weight: 600;
+}
+
+.login-card .form-label {
+  color: #555;
+  font-weight: 500;
+}
+
+.login-card .form-control {
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.login-card .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(179, 0, 0, 0.25);
+  border-color: #b30000;
+}
+
+.login-card .btn-primary {
+  background-color: #b30000;
+  border-color: #b30000;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.login-card .btn-primary:hover {
+  background-color: #8c0000;
+  border-color: #8c0000;
+}
+
+.login-card .btn-outline-primary {
+  color: #b30000;
+  border-color: #b30000;
+}
+
+.login-card .btn-outline-primary:hover {
+  background-color: #ff6b6b;
+  border-color: #ff6b6b;
+  color: white;
+}
+
+.login-card a {
+  color: #b30000;
+}
+
+.login-card a:hover {
+  color: #ff6b6b;
+}
+
+/* Proje Kartları Stilleri */
+.project-card {
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.project-card .card-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-card .card-text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.tech-stack .badge {
+  margin-right: 5px;
+  padding: 6px 12px;
+  font-weight: 500;
+  background-color: #b30000 !important;
+}
+
+.project-card .btn-outline-primary {
+  color: #b30000;
+  border-color: #b30000;
+  font-weight: 500;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card .btn-outline-primary:hover {
+  background-color: #b30000;
+  border-color: #b30000;
+  color: white;
+}
+
+/* Proje Detay Sayfası Stilleri */
+.project-detail {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.project-detail h1 {
+  color: #333;
+  font-weight: 700;
+}
+
+.project-detail h3 {
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-detail p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  color: #666;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: #b30000;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.project-detail .btn-outline-primary {
+  padding: 10px 25px;
+  font-size: 1.1rem;
+}
+
+.project-detail .btn-outline-primary i {
+  margin-right: 8px;
+}
+
+/* Dil Seçimi Butonu Stilleri */
+.language-btn {
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.language-btn .bi-globe2 {
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+.language-btn.dropdown-toggle::after {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}
+
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  font-size: 0.9rem;
+  padding: 6px 15px;
+  color: #333;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(179, 0, 0, 0.1);
+  color: #b30000;
+}
+
+.dropdown-item.active {
+  background-color: #b30000;
+  color: white;
+}
+
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+  /* Navbar Düzenlemeleri */
+  .navbar .container-fluid {
+    padding: 10px;
+  }
+
+  .dropdown-content {
+    min-width: 200px;
+    right: 0;
+    left: auto;
+  }
+
+  .search-container {
+    display: none;
+  }
+
+  /* Orta Kısım Düzenlemeleri */
+  .main-content {
+    height: auto !important;
+    padding: 20px 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-3, .col-4, .col-5 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .middle-side {
+    order: 1;
+  }
+
+  .right-side {
+    order: 3;
+  }
+
+  .gallery-img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Footer Düzenlemeleri */
+  .footer-top .row {
+    flex-direction: column;
+  }
+
+  .footer-top .col-4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .comment-form {
+    margin-bottom: 20px;
+  }
+
+  /* Dil Seçimi Butonu */
+  .language-btn {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+
+  .language-btn .bi-globe2 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet Uyumluluk */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-content {
+    height: auto !important;
+    padding: 30px 0;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-5 {
+    width: 50%;
+  }
+
+  .col-4 {
+    width: 25%;
+  }
+
+  .gallery-img {
+    max-width: 90%;
+  }
+}
+
+/* Küçük Mobil Cihazlar */
+@media screen and (max-width: 480px) {
+  .navbar .btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .personal-info {
+    font-size: 0.9rem !important;
+  }
+
+  .social-media {
+    font-size: 0.9rem;
+  }
+
+  .content-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer h5 {
+    font-size: 1.1rem;
+  }
+
+  .footer p, .footer li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Yükseklik Bazlı Düzenlemeler */
+@media screen and (max-height: 600px) {
+  .main-content {
+    height: auto !important;
+    min-height: 500px;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
+
+/* Tema Butonu Stilleri */
+.theme-btn {
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.theme-btn i {
+  font-size: 0.9rem;
+}
+
+/* Karanlık Tema Stilleri */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+body.dark-theme .custom-navbar {
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #404040;
+}
+
+body.dark-theme .main-content {
+  background-color: #1a1a1a;
+}
+
+body.dark-theme .left-side {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .middle-side {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .middle-side .content-box {
+  background-color: #2a2a2a;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #404040;
+}
+
+body.dark-theme .middle-side h2 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 1.8rem;
+}
+
+body.dark-theme .middle-side p {
+  color: #d1d1d1;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .right-side {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .footer {
+  background-color: #2d2d2d;
+  border-top: 1px solid #404040;
+}
+
+body.dark-theme .footer-top {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .footer-bottom {
+  background-color: #2d2d2d;
+}
+
+body.dark-theme .dropdown-content {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+}
+
+body.dark-theme .dropdown-content a {
+  color: #fff;
+}
+
+body.dark-theme .dropdown-content a:hover {
+  background-color: #404040;
+  color: #fff;
+}
+
+body.dark-theme .form-control {
+  background-color: #404040;
+  border-color: #505050;
+  color: #fff;
+}
+
+body.dark-theme .form-control:focus {
+  background-color: #404040;
+  border-color: #666;
+  color: #fff;
+}
+
+body.dark-theme .btn-outline-light {
+  border-color: #404040;
+}
+
+body.dark-theme .btn-outline-light:hover {
+  background-color: #404040;
+  border-color: #505050;
+}
+
+body.dark-theme .personal-info {
+  color: #b30000 !important;
+}
+
+body.dark-theme .social-link {
+  color: #b30000 !important;
+}
+
+body.dark-theme .social-link:hover {
+  color: #ff0000 !important;
+}
+
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+  .theme-btn {
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+
+  .theme-btn i {
+    font-size: 0.8rem;
+  }
+}
+
+.middle-side .content-box {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.middle-side h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+}
+
+.middle-side p {
+  color: #34495e;
+  line-height: 1.8;
+  font-size: 1.15rem;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05);
+}

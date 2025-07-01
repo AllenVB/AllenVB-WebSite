@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Kişisel Web Sitesi</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Özel CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Üst Menü -->
+  <nav class="navbar custom-navbar">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <!-- Dropdown Menü -->
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button">
+          Menü
+        </button>
+        <div class="dropdown-content">
+          <a href="#hakkimda">Hakkımda</a>
+          <a href="projelerim.html">Projelerim</a>
+          <a href="#iletisim">İletişim</a>
+        </div>
+      </div>
+
+      <!-- Dil Seçimi ve Arama -->
+      <div class="d-flex align-items-center gap-2">
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle language-btn" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-globe2"></i> TR
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item active" href="#" data-lang="tr">Türkçe</a></li>
+            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+          </ul>
+        </div>
+        <button id="themeToggle" class="btn btn-outline-light theme-btn">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <a href="giris.html" class="btn btn-outline-light">
+          <i class="bi bi-person-circle"></i> Giriş Yap
+        </a>
+        <div class="search-container position-relative">
+          <input class="form-control search-input" type="search" placeholder="Ara" />
+          <i class="bi bi-search search-icon"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Orta Kısım -->
+  <div class="container main-content" style="height: 635px;">
+    <div class="row h-100 gx-3">
+      <!-- Sol Bölüm (3 birim) -->
+      <div class="col-3 d-flex flex-column justify-content-center left-side">
+        <!-- Kişisel Bilgiler -->
+        <ul class="personal-info mb-5" style="padding-left: 20px; font-weight:600; font-size:1rem; color:#b30000;">
+          <li data-tr="name">Süleyman Emre ARLI</li>
+          <li data-tr="location">Balıkesir,Bandırma,Türkiye</li>
+        </ul>
+
+        <!-- Sosyal Medya -->
+        <ol class="social-media d-flex flex-column gap-3 list-unstyled" style="margin:0; padding:0;">
+          <li>
+            <a href="https://www.instagram.com/suleymanemrearlii/" target="_blank"
+              class="social-link d-flex align-items-center gap-2"
+              style="color:#b30000; font-weight:500; text-decoration:none;">
+              <i class="bi bi-instagram" style="font-size:1.3rem;"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@suleymanemrearlii" target="_blank"
+              class="social-link d-flex align-items-center gap-2"
+              style="color:#b30000; font-weight:500; text-decoration:none;">
+              <i class="bi bi-youtube" style="font-size:1.3rem;"></i> YouTube
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/SleymanEmreArl1" target="_blank"
+              class="social-link d-flex align-items-center gap-2"
+              style="color:#b30000; font-weight:500; text-decoration:none;">
+              <i class="bi bi-twitter-x" style="font-size:1.3rem;"></i> X
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/s%C3%BCleyman-emre-arl%C4%B1-608491330/" target="_blank"
+              class="social-link d-flex align-items-center gap-2"
+              style="color:#b30000; font-weight:500; text-decoration:none;">
+              <i class="bi bi-linkedin" style="font-size:1.3rem;"></i> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/kullaniciadi" target="_blank"
+              class="social-link d-flex align-items-center gap-2"
+              style="color:#b30000; font-weight:500; text-decoration:none;">
+              <i class="bi bi-github" style="font-size:1.3rem;"></i> GitHub
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Orta Bölüm (5 birim) -->
+      <div class="col-5 middle-side d-flex justify-content-center align-items-center">
+        <div class="content-box">
+          <h2 data-tr="welcome">Hoş Geldiniz</h2>
+          <p data-tr="middle-content">Buraya orta bölüm içeriği gelecek</p>
+        </div>
+      </div>
+
+      <!-- Sağ Bölüm (4 birim) -->
+      <div class="col-4 right-side d-flex justify-content-center align-items-center">
+        <img src="ben1.jpeg" alt="Sağ Görsel" class="img-fluid rounded shadow gallery-img">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <!-- Sol Bölüm - Yorum Alanı -->
+          <div class="col-4">
+            <h5 data-tr="comment">Yorum Yap</h5>
+            <form class="comment-form" id="commentForm">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="name" placeholder="Adınız" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" placeholder="E-posta" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Lütfen geçerli bir e-posta adresi giriniz (@ ve . içermelidir)">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="comment" rows="3" placeholder="Yorumunuz" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-light" data-tr="send">Gönder</button>
+            </form>
+          </div>
+          
+          <!-- Orta Bölüm -->
+          <div class="col-4">
+            <h5 data-tr="quick-links">Hızlı Bağlantılar</h5>
+            <ul class="list-unstyled">
+              <li><a href="#hakkimda" data-tr="about">Hakkımda</a></li>
+              <li><a href="projelerim.html" data-tr="projects">Projelerim</a></li>
+              <li><a href="#iletisim" data-tr="contact">İletişim</a></li>
+            </ul>
+          </div>
+          
+          <!-- Sağ Bölüm -->
+          <div class="col-4">
+            <h5 data-tr="contact-info">İletişim Bilgileri</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-geo-alt"></i> <span data-tr="location">Balıkesir, Bandırma</span></li>
+              <li><i class="bi bi-envelope"></i> suleymanarli0666@gmail.com</li>
+              <li><i class="bi bi-telephone"></i> +90 544 453 0125</li>
+            </ul>
+            <h5 class="mt-4" data-tr="about">Hakkımda</h5>
+            <p class="about-text" data-tr="about-text">
+              Merhabalar, ben Süleyman Emre Arlı, 20 yaşındayım ve Bandırma Onyedi Eylül Üniversitesinde Yazılım Mühendisliği 2.sınıf öğrencisiyim. Bu benim ilk projem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-text text-center">
+          © 2025 Süleyman Emre ARLI | <span data-tr="rights">Tüm Hakları Saklıdır</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Tema Değiştirme JavaScript -->
+  <script>
+    // Tema değiştirme fonksiyonu
+    function toggleTheme() {
+      const body = document.body;
+      const themeBtn = document.getElementById('themeToggle');
+      const icon = themeBtn.querySelector('i');
+      
+      if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        icon.classList.remove('bi-sun-fill');
+        icon.classList.add('bi-moon-fill');
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark-theme');
+        icon.classList.remove('bi-moon-fill');
+        icon.classList.add('bi-sun-fill');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Sayfa yüklendiğinde tema tercihini kontrol et
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      const themeBtn = document.getElementById('themeToggle');
+      const icon = themeBtn.querySelector('i');
+      
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        icon.classList.remove('bi-moon-fill');
+        icon.classList.add('bi-sun-fill');
+      }
+
+      // Tema değiştirme butonuna tıklama olayı ekle
+      themeBtn.addEventListener('click', toggleTheme);
+    });
+  </script>
+
+  <!-- Dil Değiştirme JavaScript -->
+  <script>
+    const translations = {
+      tr: {
+        "welcome": "Hoş Geldiniz",
+        "middle-content": "Buraya orta bölüm içeriği gelecek",
+        "comment": "Yorum Yap",
+        "send": "Gönder",
+        "quick-links": "Hızlı Bağlantılar",
+        "about": "Hakkımda",
+        "projects": "Projelerim",
+        "contact": "İletişim",
+        "contact-info": "İletişim Bilgileri",
+        "location": "Balıkesir, Bandırma",
+        "about-text": "Merhabalar, ben Süleyman Emre Arlı, 20 yaşındayım ve Bandırma Onyedi Eylül Üniversitesinde Yazılım Mühendisliği 2.sınıf öğrencisiyim. Bu benim ilk projem.",
+        "rights": "Tüm Hakları Saklıdır"
+      },
+      en: {
+        "welcome": "Welcome",
+        "middle-content": "Middle section content will be here",
+        "comment": "Leave a Comment",
+        "send": "Send",
+        "quick-links": "Quick Links",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
+        "contact-info": "Contact Information",
+        "location": "Balikesir, Bandirma",
+        "about-text": "Hello, I am Süleyman Emre Arlı, I am 20 years old and I am a 2nd year Software Engineering student at Bandirma Onyedi Eylul University. This is my first project.",
+        "rights": "All Rights Reserved"
+      }
+    };
+
+    // Dil değiştirme fonksiyonu
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-tr]').forEach(element => {
+        const key = element.getAttribute('data-tr');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+
+      // Dil butonunu güncelle
+      const langButton = document.getElementById('languageDropdown');
+      langButton.innerHTML = `<i class="bi bi-globe2"></i> ${lang.toUpperCase()}`;
+
+      // Aktif dil seçeneğini güncelle
+      document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('data-lang') === lang) {
+          item.classList.add('active');
+        }
+      });
+
+      // Dil tercihini localStorage'a kaydet
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Sayfa yüklendiğinde dil tercihini kontrol et
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
+      changeLanguage(savedLang);
+
+      // Dil seçimi için event listener'ları ekle
+      document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lang = e.target.getAttribute('data-lang');
+          changeLanguage(lang);
+        });
+      });
+    });
+  </script>
+
+  <!-- Yorum Formu JavaScript -->
+  <script>
+    document.getElementById('commentForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Form verilerini al
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        comment: document.getElementById('comment').value,
+        timestamp: new Date().toISOString()
+      };
+
+      try {
+        // Mevcut yorumları oku
+        const response = await fetch('yorumlar.json');
+        const data = await response.json();
+        
+        // Yeni yorumu ekle
+        data.yorumlar.push(formData);
+        
+        // JSON dosyasına kaydet
+        const saveResponse = await fetch('yorumlar.json', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data, null, 2)
+        });
+
+        if (saveResponse.ok) {
+          // Formu temizle
+          this.reset();
+          
+          // Kullanıcıya bilgi ver
+          alert('Yorumunuz başarıyla kaydedildi!');
+        } else {
+          throw new Error('Yorum kaydedilemedi');
+        }
+      } catch (error) {
+        console.error('Hata:', error);
+        alert('Yorum kaydedilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+      }
+    });
+  </script>
+</body>
+
+</html>
