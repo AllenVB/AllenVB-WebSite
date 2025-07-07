@@ -112,6 +112,7 @@
         <div class="content-box">
           <h2 data-tr="welcome">Hoş Geldiniz</h2>
           <p data-tr="middle-content">Buraya orta bölüm içeriği gelecek</p>
+          <!-- Hava Durumu Kutusu kaldırıldı -->
         </div>
       </div>
 
@@ -143,6 +144,8 @@
               </div>
               <button type="submit" class="btn btn-light" data-tr="send">Gönder</button>
             </form>
+            <!-- Yorumlar Listesi -->
+            <div id="comments-list" class="mt-4"></div>
           </div>
           
           <!-- Orta Bölüm -->
@@ -342,6 +345,29 @@
         alert('Yorum kaydedilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
       }
     });
+  </script>
+
+  <!-- Yorumlar JS -->
+  <script>
+    // Yorumları Listele
+    function loadComments() {
+      fetch('yorumlar.json')
+        .then(res => res.json())
+        .then(data => {
+          const list = document.getElementById('comments-list');
+          if (data.yorumlar && data.yorumlar.length > 0) {
+            list.innerHTML = '<h6>Yorumlar</h6>' + data.yorumlar.map(y => `
+              <div class='mb-2 p-2 border rounded bg-light'>
+                <b>${y.name}</b> <span style='font-size:0.9em;color:#888;'>${new Date(y.timestamp).toLocaleString('tr-TR')}</span><br/>
+                <span>${y.comment}</span>
+              </div>
+            `).join('');
+          } else {
+            list.innerHTML = '<em>Henüz yorum yok.</em>';
+          }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', loadComments);
   </script>
 </body>
 

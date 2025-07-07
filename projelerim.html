@@ -47,61 +47,8 @@
   <!-- Projeler Bölümü -->
   <div class="container mt-5">
     <h2 class="text-center mb-5">Projelerim</h2>
-    
-    <div class="row g-4">
-      <!-- Proje 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100">
-          <img src="bg.jpg" class="card-img-top" alt="Proje 1">
-          <div class="card-body">
-            <h5 class="card-title">Kişisel Web Sitesi</h5>
-            <p class="card-text">HTML, CSS ve JavaScript kullanarak geliştirdiğim kişisel web sitem. Responsive tasarım ve modern UI/UX prensipleri ile oluşturuldu.</p>
-            <div class="tech-stack mb-3">
-              <span class="badge bg-primary">HTML</span>
-              <span class="badge bg-primary">CSS</span>
-              <span class="badge bg-primary">JavaScript</span>
-              <span class="badge bg-primary">Bootstrap</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary">Detayları Gör</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proje 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100">
-          <img src="eticaret.jpg" class="card-img-top" alt="Proje 2">
-          <div class="card-body">
-            <h5 class="card-title">E-Ticaret Uygulaması</h5>
-            <p class="card-text">React ve Node.js kullanarak geliştirdiğim tam kapsamlı bir e-ticaret uygulaması. Kullanıcı yönetimi, ürün kataloğu ve ödeme sistemi entegrasyonu içerir.</p>
-            <div class="tech-stack mb-3">
-              <span class="badge bg-primary">React</span>
-              <span class="badge bg-primary">Node.js</span>
-              <span class="badge bg-primary">MongoDB</span>
-              <span class="badge bg-primary">Express</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary">Detayları Gör</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proje 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card h-100">
-          <img src="gym.jpg" class="card-img-top" alt="Proje 3">
-          <div class="card-body">
-            <h5 class="card-title">Mobil Fitness Uygulaması</h5>
-            <p class="card-text">Flutter ile geliştirdiğim cross-platform fitness uygulaması. Egzersiz takibi, beslenme planı ve ilerleme grafikleri içerir.</p>
-            <div class="tech-stack mb-3">
-              <span class="badge bg-primary">Flutter</span>
-              <span class="badge bg-primary">Dart</span>
-              <span class="badge bg-primary">Firebase</span>
-              <span class="badge bg-primary">REST API</span>
-            </div>
-            <a href="#" class="btn btn-outline-primary">Detayları Gör</a>
-          </div>
-        </div>
-      </div>
+    <div class="row g-4" id="projects-container">
+      <!-- Projeler buraya dinamik olarak eklenecek -->
     </div>
   </div>
 
@@ -118,6 +65,32 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Projeleri JSON'dan çekip ekrana yazdır
+    fetch('projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const container = document.getElementById('projects-container');
+        container.innerHTML = '';
+        projects.forEach(project => {
+          container.innerHTML += `
+            <div class="col-md-6 col-lg-4">
+              <div class="card project-card h-100">
+                <img src="${project.image}" class="card-img-top" alt="${project.title}">
+                <div class="card-body">
+                  <h5 class="card-title">${project.title}</h5>
+                  <p class="card-text">${project.description}</p>
+                  <div class="tech-stack mb-3">
+                    ${project.tech.map(tech => `<span class='badge bg-primary'>${tech}</span>`).join(' ')}
+                  </div>
+                  <a href="index.html" class="btn btn-outline-primary">Detayları Gör</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      });
+  </script>
 </body>
 
 </html>
