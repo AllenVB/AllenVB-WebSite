@@ -47,8 +47,47 @@
   <!-- Projeler Bölümü -->
   <div class="container mt-5">
     <h2 class="text-center mb-5">Projelerim</h2>
-    <div class="row g-4" id="projects-container">
-      <!-- Projeler buraya dinamik olarak eklenecek -->
+
+    <div class="row g-4">
+      <!-- Proje 1 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100">
+          <img src="index.jpg" class="card-img-top" alt="Proje 1">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="text-align: center;">Pala Baba Gurme Restorant</h5>
+            <p class="card-text" style="text-align: center;">Şık atmosferimizde, özenle hazırlanmış akşam yemekleri ve
+              seçkin içecekler ile hizmetinizdeyiz.</p>
+            <p style="text-align: center;">Sadece rezervasyon ile çalışıyoruz.</p>
+            <a href="https://palarestaurant.vercel.app/index.html" class="btn btn-outline-primary mt-auto" target="_blank">Detayları Gör</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 2 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100">
+          <img src="kafe.jpg" class="card-img-top" alt="Proje 2">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="text-align: center;">Allen Cafe & Bistro</h5>
+            <p class="card-text" style="text-align: center;">2024'ten beri değişmeyen lezzetimiz ve samimi
+              atmosferimizle, her fincanda ve her tabakta kaliteyi ve sevgiyi hissedeceksiniz.</p>
+            <a href="index.html" class="btn btn-outline-primary mt-auto">Detayları Gör</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proje 3 -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card project-card h-100">
+          <img src="gym.jpg" class="card-img-top" alt="Proje 3">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="text-align: center;">Proje 3</h5>
+            <p class="card-text" style="text-align: center;">Bu kart, Proje 3 hakkında kısa bir açıklama içerir.
+              Performans ve estetik ön planda tutulmuştur.</p>
+            <a href="index.html" class="btn btn-outline-primary mt-auto">Detayları Gör</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -65,32 +104,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Projeleri JSON'dan çekip ekrana yazdır
-    fetch('projects.json')
-      .then(res => res.json())
-      .then(projects => {
-        const container = document.getElementById('projects-container');
-        container.innerHTML = '';
-        projects.forEach(project => {
-          container.innerHTML += `
-            <div class="col-md-6 col-lg-4">
-              <div class="card project-card h-100">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}">
-                <div class="card-body">
-                  <h5 class="card-title">${project.title}</h5>
-                  <p class="card-text">${project.description}</p>
-                  <div class="tech-stack mb-3">
-                    ${project.tech.map(tech => `<span class='badge bg-primary'>${tech}</span>`).join(' ')}
-                  </div>
-                  <a href="index.html" class="btn btn-outline-primary">Detayları Gör</a>
-                </div>
-              </div>
-            </div>
-          `;
-        });
-      });
-  </script>
 </body>
 
 </html>
