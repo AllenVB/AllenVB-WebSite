@@ -3,7 +3,7 @@
 // ==========================================
 
 const pages = {
-    home: `
+  home: `
     <section class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-fade-in-up">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -30,7 +30,7 @@ const pages = {
     </section>
   `,
 
-    about: `
+  about: `
     <section class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-fade-in-up">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 class="text-5xl md:text-6xl font-bold text-blue-400 mb-12" data-tr="nav-about">Hakkımda</h2>
@@ -120,7 +120,7 @@ const pages = {
     </section>
   `,
 
-    projects: `
+  projects: `
     <section class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-fade-in-up">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 class="text-5xl md:text-6xl font-bold text-blue-400 mb-12" data-tr="nav-projects">Projelerim</h2>
@@ -131,16 +131,17 @@ const pages = {
               <i class="bi bi-globe text-white" style="font-size: 3rem;"></i>
             </div>
             <div class="p-6">
-              <h5 class="text-xl font-bold text-blue-400 mb-2">Proje 1</h5>
-              <p class="text-slate-400 mb-4">Proje açıklaması buraya gelecek. Teknolojiler ve özellikler hakkında bilgi ekleyebilirsiniz.</p>
+              <h5 class="text-xl font-bold text-blue-400 mb-2">Smart Home Security Sistem</h5>
+              <p class="text-slate-400 mb-4">Akıllı ev güvenlik sistemi - cihazları kontrol et, güvenlik verilerini izle ve yönet. Gerçek zamanlı bildirimler ve veri tabanı entegrasyonu ile geliştirilmiş tam özellikli bir platform.</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">HTML</span>
-                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">CSS</span>
-                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">JS</span>
+                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">HTML5</span>
+                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">CSS3</span>
+                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">JavaScript</span>
+                <span class="px-3 py-1 bg-blue-500 text-white text-sm rounded">Tailwind</span>
               </div>
-              <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition">
-                <i class="bi bi-github me-2"></i>Detaylar
-              </button>
+              <a href="https://smart-home-security-veri-taban.vercel.app/" target="_blank" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition block text-center">
+                <i class="bi bi-arrow-up-right me-2"></i>Projeyi Aç
+              </a>
             </div>
           </div>
 
@@ -149,15 +150,18 @@ const pages = {
               <i class="bi bi-lightning text-white" style="font-size: 3rem;"></i>
             </div>
             <div class="p-6">
-              <h5 class="text-xl font-bold text-blue-400 mb-2">Proje 2</h5>
-              <p class="text-slate-400 mb-4">Proje açıklaması buraya gelecek. Teknolojiler ve özellikler hakkında bilgi ekleyebilirsiniz.</p>
+              <h5 class="text-xl font-bold text-blue-400 mb-2">User SSO (Single Sign-On)</h5>
+              <p class="text-slate-400 mb-4">Güvenli kullanıcı yönetimi ve tek oturum açma sistemi. JWT tabanlı kimlik doğrulama, Spring Security ile korunan API'ler ve PostgreSQL veritabanı ile geliştirilmiş enterprise çözümü.</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">React</span>
-                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">Node.js</span>
+                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">Java 17</span>
+                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">Spring Boot 3.x</span>
+                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">Spring Security 6</span>
+                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">PostgreSQL</span>
+                <span class="px-3 py-1 bg-green-500 text-white text-sm rounded">JWT</span>
               </div>
-              <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition">
-                <i class="bi bi-github me-2"></i>Detaylar
-              </button>
+              <a href="https://github.com/AllenVB/usersso" target="_blank" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition block text-center">
+                <i class="bi bi-github me-2"></i>GitHub'da Gör
+              </a>
             </div>
           </div>
 
@@ -229,63 +233,12 @@ const pages = {
             </div>
           </div>
 
-          <div class="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden hover:border-pink-400 hover:scale-105 transition transform duration-300" style="animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.7s; opacity: 0;">
-            <div class="h-32 bg-gradient-to-r from-pink-500 to-pink-600 flex items-center justify-center">
-              <i class="bi bi-camera text-white" style="font-size: 3rem;"></i>
-            </div>
-            <div class="p-6">
-              <h5 class="text-xl font-bold text-blue-400 mb-2">Proje 7</h5>
-              <p class="text-slate-400 mb-4">Proje açıklaması buraya gelecek. Teknolojiler ve özellikler hakkında bilgi ekleyebilirsiniz.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-pink-500 text-white text-sm rounded">Gallery</span>
-                <span class="px-3 py-1 bg-pink-500 text-white text-sm rounded">Media</span>
-              </div>
-              <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition">
-                <i class="bi bi-github me-2"></i>Detaylar
-              </button>
-            </div>
-          </div>
-
-          <div class="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden hover:border-indigo-400 hover:scale-105 transition transform duration-300" style="animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.8s; opacity: 0;">
-            <div class="h-32 bg-gradient-to-r from-indigo-500 to-indigo-600 flex items-center justify-center">
-              <i class="bi bi-graph-up text-white" style="font-size: 3rem;"></i>
-            </div>
-            <div class="p-6">
-              <h5 class="text-xl font-bold text-blue-400 mb-2">Proje 8</h5>
-              <p class="text-slate-400 mb-4">Proje açıklaması buraya gelecek. Teknolojiler ve özellikler hakkında bilgi ekleyebilirsiniz.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-indigo-500 text-white text-sm rounded">Analytics</span>
-                <span class="px-3 py-1 bg-indigo-500 text-white text-sm rounded">Dashboard</span>
-              </div>
-              <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition">
-                <i class="bi bi-github me-2"></i>Detaylar
-              </button>
-            </div>
-          </div>
-
-          <div class="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden hover:border-orange-400 hover:scale-105 transition transform duration-300" style="animation: fadeInUp 0.8s ease-out forwards; animation-delay: 0.9s; opacity: 0;">
-            <div class="h-32 bg-gradient-to-r from-orange-500 to-orange-600 flex items-center justify-center">
-              <i class="bi bi-robot text-white" style="font-size: 3rem;"></i>
-            </div>
-            <div class="p-6">
-              <h5 class="text-xl font-bold text-blue-400 mb-2">Proje 9</h5>
-              <p class="text-slate-400 mb-4">Proje açıklaması buraya gelecek. Teknolojiler ve özellikler hakkında bilgi ekleyebilirsiniz.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-orange-500 text-white text-sm rounded">AI</span>
-                <span class="px-3 py-1 bg-orange-500 text-white text-sm rounded">Automation</span>
-              </div>
-              <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 rounded transition">
-                <i class="bi bi-github me-2"></i>Detaylar
-              </button>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
   `,
 
-    contact: `
+  contact: `
     <section class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-fade-in-up">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 class="text-5xl md:text-6xl font-bold text-blue-400 mb-12" data-tr="nav-contact">İletişim & Görüşleriniz</h2>
@@ -380,54 +333,54 @@ const pages = {
 
 // Çeviriler
 const translations = {
-    tr: {
-        "nav-home": "Anasayfa",
-        "nav-about": "Hakkımda",
-        "nav-projects": "Projelerim",
-        "nav-contact": "İletişim",
-        "welcome": "Hoş Geldiniz",
-        "home-subtitle": "Yazılım Mühendisi ve Web Developer",
-        "quick-links": "Hızlı Bağlantılar",
-        "contact-info": "İletişim Bilgileri",
-        "location": "Balıkesir, Bandırma, Türkiye",
-        "social": "Sosyal Ağlar",
-        "rights": "Tüm Hakları Saklıdır",
-        "about-title": "Kişisel Bilgiler",
-        "about-description": "Merhaba! Ben Süleyman Emre Arlı, 21 yaşındayım ve Bandırma Onyedi Eylül Üniversitesinde Yazılım Mühendisliği öğrencisiyim.",
-        "about-description2": "Modern teknolojiler ile projeler geliştirmeyi severim. Özellikle responsive tasarım, backend geliştirme ve veritabanı yönetimi konularında kendimi geliştirmekteyim.",
-        "skills": "Yetenekler",
-        "education": "Eğitim",
-        "get-in-touch": "Benimle İletişime Geçin",
-        "name": "Adınız",
-        "email": "E-posta",
-        "subject": "Konu",
-        "message": "Mesaj",
-        "send": "Gönder"
-    },
-    en: {
-        "nav-home": "Home",
-        "nav-about": "About",
-        "nav-projects": "Projects",
-        "nav-contact": "Contact",
-        "welcome": "Welcome",
-        "home-subtitle": "Software Engineer and Web Developer",
-        "quick-links": "Quick Links",
-        "contact-info": "Contact Information",
-        "location": "Balikesir, Bandirma, Turkey",
-        "social": "Social Networks",
-        "rights": "All Rights Reserved",
-        "about-title": "About Me",
-        "about-description": "Hello! I'm Suleyman Emre Arli, 21 years old and a Software Engineering student at Bandirma Onyedi Eylul University.",
-        "about-description2": "I love developing projects with modern technologies. Especially I'm improving myself in responsive design, backend development and database management.",
-        "skills": "Skills",
-        "education": "Education",
-        "get-in-touch": "Get In Touch",
-        "name": "Your Name",
-        "email": "Email",
-        "subject": "Subject",
-        "message": "Message",
-        "send": "Send"
-    }
+  tr: {
+    "nav-home": "Anasayfa",
+    "nav-about": "Hakkımda",
+    "nav-projects": "Projelerim",
+    "nav-contact": "İletişim",
+    "welcome": "Hoş Geldiniz",
+    "home-subtitle": "Yazılım Mühendisi ve Web Developer",
+    "quick-links": "Hızlı Bağlantılar",
+    "contact-info": "İletişim Bilgileri",
+    "location": "Balıkesir, Bandırma, Türkiye",
+    "social": "Sosyal Ağlar",
+    "rights": "Tüm Hakları Saklıdır",
+    "about-title": "Kişisel Bilgiler",
+    "about-description": "Merhaba! Ben Süleyman Emre Arlı, 21 yaşındayım ve Bandırma Onyedi Eylül Üniversitesinde Yazılım Mühendisliği öğrencisiyim.",
+    "about-description2": "Modern teknolojiler ile projeler geliştirmeyi severim. Özellikle responsive tasarım, backend geliştirme ve veritabanı yönetimi konularında kendimi geliştirmekteyim.",
+    "skills": "Yetenekler",
+    "education": "Eğitim",
+    "get-in-touch": "Benimle İletişime Geçin",
+    "name": "Adınız",
+    "email": "E-posta",
+    "subject": "Konu",
+    "message": "Mesaj",
+    "send": "Gönder"
+  },
+  en: {
+    "nav-home": "Home",
+    "nav-about": "About",
+    "nav-projects": "Projects",
+    "nav-contact": "Contact",
+    "welcome": "Welcome",
+    "home-subtitle": "Software Engineer and Web Developer",
+    "quick-links": "Quick Links",
+    "contact-info": "Contact Information",
+    "location": "Balikesir, Bandirma, Turkey",
+    "social": "Social Networks",
+    "rights": "All Rights Reserved",
+    "about-title": "About Me",
+    "about-description": "Hello! I'm Suleyman Emre Arli, 21 years old and a Software Engineering student at Bandirma Onyedi Eylul University.",
+    "about-description2": "I love developing projects with modern technologies. Especially I'm improving myself in responsive design, backend development and database management.",
+    "skills": "Skills",
+    "education": "Education",
+    "get-in-touch": "Get In Touch",
+    "name": "Your Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send"
+  }
 };
 
 // ==========================================
@@ -435,20 +388,20 @@ const translations = {
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Tema tercihini kontrol et ve ayarla
-    initializeTheme();
+  // Tema tercihini kontrol et ve ayarla
+  initializeTheme();
 
-    // Dil tercihini kontrol et ve ayarla
-    initializeLanguage();
+  // Dil tercihini kontrol et ve ayarla
+  initializeLanguage();
 
-    // Sayfa yükleme sistemini başlat
-    initializeRouter();
+  // Sayfa yükleme sistemini başlat
+  initializeRouter();
 
-    // İletişim formu dinleyicisini ekle
-    setupFormListeners();
+  // İletişim formu dinleyicisini ekle
+  setupFormListeners();
 
-    // Mobile menu öğesini ayarla
-    setupMobileMenu();
+  // Mobile menu öğesini ayarla
+  setupMobileMenu();
 });
 
 // ==========================================
@@ -456,33 +409,33 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 
 function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    const themeBtn = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const themeBtn = document.getElementById('themeToggle');
 
-    applyTheme(savedTheme);
+  applyTheme(savedTheme);
 
-    themeBtn.addEventListener('click', () => {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light-theme' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        applyTheme(newTheme);
-    });
+  themeBtn.addEventListener('click', () => {
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light-theme' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  });
 }
 
 function applyTheme(theme) {
-    const body = document.body;
-    const themeBtn = document.getElementById('themeToggle');
-    const icon = themeBtn.querySelector('i');
+  const body = document.body;
+  const themeBtn = document.getElementById('themeToggle');
+  const icon = themeBtn.querySelector('i');
 
-    body.classList.remove('light-theme');
-    icon.classList.remove('bi-sun-fill');
-    icon.classList.add('bi-moon-fill');
+  body.classList.remove('light-theme');
+  icon.classList.remove('bi-sun-fill');
+  icon.classList.add('bi-moon-fill');
 
-    if (theme === 'light-theme') {
-        body.classList.add('light-theme');
-        icon.classList.remove('bi-moon-fill');
-        icon.classList.add('bi-sun-fill');
-    }
+  if (theme === 'light-theme') {
+    body.classList.add('light-theme');
+    icon.classList.remove('bi-moon-fill');
+    icon.classList.add('bi-sun-fill');
+  }
 }
 
 // ==========================================
@@ -490,49 +443,49 @@ function applyTheme(theme) {
 // ==========================================
 
 function initializeLanguage() {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
-    changeLanguage(savedLang);
+  const savedLang = localStorage.getItem('preferredLanguage') || 'tr';
+  changeLanguage(savedLang);
 
-    // Dil seçimi dinleyicilerini ekle
-    document.querySelectorAll('[data-lang]').forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = e.target.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
+  // Dil seçimi dinleyicilerini ekle
+  document.querySelectorAll('[data-lang]').forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      const lang = e.target.getAttribute('data-lang');
+      changeLanguage(lang);
     });
+  });
 }
 
 function changeLanguage(lang) {
-    // Sayfadaki çevrilecek öğeleri güncelle
-    document.querySelectorAll('[data-tr]').forEach(element => {
-        const key = element.getAttribute('data-tr');
-        if (translations[lang] && translations[lang][key]) {
-            // Placeholder ise placeholder'ı güncelle
-            if (element.placeholder) {
-                element.placeholder = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
-        }
-    });
-
-    // Dil göstergesini güncelle
-    const langDisplay = document.getElementById('langDisplay');
-    if (langDisplay) {
-        langDisplay.textContent = lang.toUpperCase();
+  // Sayfadaki çevrilecek öğeleri güncelle
+  document.querySelectorAll('[data-tr]').forEach(element => {
+    const key = element.getAttribute('data-tr');
+    if (translations[lang] && translations[lang][key]) {
+      // Placeholder ise placeholder'ı güncelle
+      if (element.placeholder) {
+        element.placeholder = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
     }
+  });
 
-    // Aktif dil seçeneğini vurgula
-    document.querySelectorAll('[data-lang]').forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('data-lang') === lang) {
-            item.classList.add('active');
-        }
-    });
+  // Dil göstergesini güncelle
+  const langDisplay = document.getElementById('langDisplay');
+  if (langDisplay) {
+    langDisplay.textContent = lang.toUpperCase();
+  }
 
-    // Dil tercihini kaydet
-    localStorage.setItem('preferredLanguage', lang);
+  // Aktif dil seçeneğini vurgula
+  document.querySelectorAll('[data-lang]').forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('data-lang') === lang) {
+      item.classList.add('active');
+    }
+  });
+
+  // Dil tercihini kaydet
+  localStorage.setItem('preferredLanguage', lang);
 }
 
 // ==========================================
@@ -540,59 +493,59 @@ function changeLanguage(lang) {
 // ==========================================
 
 function initializeRouter() {
-    const container = document.getElementById('app-container');
+  const container = document.getElementById('app-container');
 
-    // Başlangıç sayfasını yükle
-    loadPage('home');
+  // Başlangıç sayfasını yükle
+  loadPage('home');
 
-    // Menü linklerine tıklama dinleyicisi ekle
-    document.querySelectorAll('[data-page]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = e.currentTarget.getAttribute('data-page');
-            loadPage(page);
-        });
+  // Menü linklerine tıklama dinleyicisi ekle
+  document.querySelectorAll('[data-page]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const page = e.currentTarget.getAttribute('data-page');
+      loadPage(page);
     });
+  });
 }
 
 function loadPage(pageName) {
-    const container = document.getElementById('app-container');
+  const container = document.getElementById('app-container');
 
-    // Sayfanın var olup olmadığını kontrol et
-    if (!pages[pageName]) {
-        pageName = 'home';
+  // Sayfanın var olup olmadığını kontrol et
+  if (!pages[pageName]) {
+    pageName = 'home';
+  }
+
+  // Fade out animasyonu
+  container.style.opacity = '0';
+
+  setTimeout(() => {
+    container.innerHTML = pages[pageName];
+
+    // Yeni sayfa yüklendiğinde çeviriler güncelle
+    const currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+    changeLanguage(currentLang);
+
+    // Sayfa içindeki butonlara dinleyici ekle
+    container.querySelectorAll('[data-page]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = e.currentTarget.getAttribute('data-page');
+        loadPage(page);
+      });
+    });
+
+    // Contact sayfasıysa mesaj listesini göster
+    if (pageName === 'contact') {
+      displayMessages();
     }
 
-    // Fade out animasyonu
-    container.style.opacity = '0';
+    // Fade in animasyonu
+    container.style.opacity = '1';
 
-    setTimeout(() => {
-        container.innerHTML = pages[pageName];
-
-        // Yeni sayfa yüklendiğinde çeviriler güncelle
-        const currentLang = localStorage.getItem('preferredLanguage') || 'tr';
-        changeLanguage(currentLang);
-
-        // Sayfa içindeki butonlara dinleyici ekle
-        container.querySelectorAll('[data-page]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const page = e.currentTarget.getAttribute('data-page');
-                loadPage(page);
-            });
-        });
-
-        // Contact sayfasıysa mesaj listesini göster
-        if (pageName === 'contact') {
-            displayMessages();
-        }
-
-        // Fade in animasyonu
-        container.style.opacity = '1';
-
-        // Sayfanın üstüne scroll et
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 300);
+    // Sayfanın üstüne scroll et
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 300);
 }
 
 // ==========================================
@@ -600,65 +553,65 @@ function loadPage(pageName) {
 // ==========================================
 
 function setupFormListeners() {
-    // Dinamik olarak yüklenecek form için event delegation kullan
-    document.addEventListener('submit', (e) => {
-        if (e.target.id === 'contactForm') {
-            handleContactForm(e);
-        }
-    });
+  // Dinamik olarak yüklenecek form için event delegation kullan
+  document.addEventListener('submit', (e) => {
+    if (e.target.id === 'contactForm') {
+      handleContactForm(e);
+    }
+  });
 }
 
 function handleContactForm(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const name = document.getElementById('contactName').value;
-    const email = document.getElementById('contactEmail').value;
-    const subject = document.getElementById('contactSubject').value;
-    const message = document.getElementById('contactMessage').value;
+  const name = document.getElementById('contactName').value;
+  const email = document.getElementById('contactEmail').value;
+  const subject = document.getElementById('contactSubject').value;
+  const message = document.getElementById('contactMessage').value;
 
-    // Basit doğrulama
-    if (!name || !email || !subject || !message) {
-        alert('Lütfen tüm alanları doldurun!');
-        return;
-    }
+  // Basit doğrulama
+  if (!name || !email || !subject || !message) {
+    alert('Lütfen tüm alanları doldurun!');
+    return;
+  }
 
-    // Mesaj objesini oluştur
-    const contactMessage = {
-        id: Date.now(),
-        name,
-        email,
-        subject,
-        message,
-        timestamp: new Date().toLocaleString('tr-TR')
-    };
+  // Mesaj objesini oluştur
+  const contactMessage = {
+    id: Date.now(),
+    name,
+    email,
+    subject,
+    message,
+    timestamp: new Date().toLocaleString('tr-TR')
+  };
 
-    // LocalStorage'da messages arrayını al
-    let messages = JSON.parse(localStorage.getItem('messages')) || [];
-    messages.unshift(contactMessage); // Yenileri başa ekle
-    localStorage.setItem('messages', JSON.stringify(messages));
+  // LocalStorage'da messages arrayını al
+  let messages = JSON.parse(localStorage.getItem('messages')) || [];
+  messages.unshift(contactMessage); // Yenileri başa ekle
+  localStorage.setItem('messages', JSON.stringify(messages));
 
-    // Başarı mesajı
-    alert('Mesajınız başarıyla kaydedildi, teşekkür ederim!');
+  // Başarı mesajı
+  alert('Mesajınız başarıyla kaydedildi, teşekkür ederim!');
 
-    // Formu temizle
-    e.target.reset();
+  // Formu temizle
+  e.target.reset();
 
-    // Mesaj listesini güncelle
-    displayMessages();
+  // Mesaj listesini güncelle
+  displayMessages();
 }
 
 function displayMessages() {
-    const messageList = document.getElementById('messageList');
-    if (!messageList) return;
+  const messageList = document.getElementById('messageList');
+  if (!messageList) return;
 
-    const messages = JSON.parse(localStorage.getItem('messages')) || [];
+  const messages = JSON.parse(localStorage.getItem('messages')) || [];
 
-    if (messages.length === 0) {
-        messageList.innerHTML = '<p class="text-slate-400 text-center py-8">Henüz mesaj yok</p>';
-        return;
-    }
+  if (messages.length === 0) {
+    messageList.innerHTML = '<p class="text-slate-400 text-center py-8">Henüz mesaj yok</p>';
+    return;
+  }
 
-    messageList.innerHTML = messages.map(msg => `
+  messageList.innerHTML = messages.map(msg => `
         <div class="bg-slate-700 border border-slate-600 p-4 rounded hover:border-blue-400 transition">
             <div class="flex justify-between items-start mb-2">
                 <h5 class="font-bold text-blue-400">${msg.name}</h5>
@@ -677,22 +630,22 @@ function displayMessages() {
 // ==========================================
 
 function setupMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-    if (!mobileMenuBtn || !mobileMenu) return;
+  if (!mobileMenuBtn || !mobileMenu) return;
 
-    // Mobile menü butonuna tıklama dinleyicisi ekle
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+  // Mobile menü butonuna tıklama dinleyicisi ekle
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Menü linklerine tıklandığında menüyü kapat
+  mobileMenu.querySelectorAll('[data-page]').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
     });
-
-    // Menü linklerine tıklandığında menüyü kapat
-    mobileMenu.querySelectorAll('[data-page]').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
+  });
 }
 
 // ==========================================
@@ -701,16 +654,16 @@ function setupMobileMenu() {
 
 // URL hash'ini izle ve sayfa değiş
 window.addEventListener('hashchange', () => {
-    const hash = location.hash.slice(1) || 'home';
-    if (pages[hash]) {
-        loadPage(hash);
-    }
+  const hash = location.hash.slice(1) || 'home';
+  if (pages[hash]) {
+    loadPage(hash);
+  }
 });
 
 // Başlangıç için hash kontrolü
 window.addEventListener('load', () => {
-    const hash = location.hash.slice(1) || 'home';
-    if (pages[hash] && hash !== 'home') {
-        loadPage(hash);
-    }
+  const hash = location.hash.slice(1) || 'home';
+  if (pages[hash] && hash !== 'home') {
+    loadPage(hash);
+  }
 });
