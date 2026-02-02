@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süleyman Emre Arlı | Kişisel Portföy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Takip Kodu -->
+    <script>
+      (function() {
+        // Ngrok terminalinde gördüğün "Forwarding" adresini buraya yapıştır
+        const API_URL = "https://collen-unlyrical-retributively.ngrok-free.dev/api/collector/track";
+        const MY_API_KEY = "745fc94c-ab14-4ed2-beb2-db4a32c990a5"; 
+
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            apiKey: MY_API_KEY,
+            path: window.location.pathname,
+            referrer: document.referrer,
+            browser: navigator.userAgent
+          })
+        })
+        .then(res => console.log("Veri başarıyla iletildi!"))
+        .catch(err => console.error("Hata:", err));
+      })();
+    </script>
+    <style>
+        /* 3D Background Animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(360deg);
+            }
+        }
+
+        @keyframes float3 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-25px) rotate(-180deg);
+            }
+        }
+
+        .float-shape1 {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .float-shape2 {
+            animation: float2 8s ease-in-out infinite;
+        }
+
+        .float-shape3 {
+            animation: float3 7s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#home" class="text-2xl font-bold text-blue-400">SE.Dev</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" data-page="home" class="text-gray-300 hover:text-blue-400 transition">Anasayfa</a>
+                    <a href="#about" data-page="about" class="text-gray-300 hover:text-blue-400 transition">Hakkımda</a>
+                    <a href="#projects" data-page="projects"
+                        class="text-gray-300 hover:text-blue-400 transition">Projelerim</a>
+                    <a href="#contact" data-page="contact"
+                        class="text-gray-300 hover:text-blue-400 transition">İletişim</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-blue-400">
+                        <i class="bi bi-list text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#home" data-page="home" class="block py-2 text-gray-300 hover:text-blue-400">Anasayfa</a>
+                <a href="#about" data-page="about" class="block py-2 text-gray-300 hover:text-blue-400">Hakkımda</a>
+                <a href="#projects" data-page="projects"
+                    class="block py-2 text-gray-300 hover:text-blue-400">Projelerim</a>
+                <a href="#contact" data-page="contact" class="block py-2 text-gray-300 hover:text-blue-400">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="app-container" class="pt-16">
+        <!-- Content will be loaded here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 Süleyman Emre Arlı. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
