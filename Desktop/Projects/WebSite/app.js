@@ -187,6 +187,11 @@ function loadPage(pageName) {
     const container = document.getElementById('app-container');
     if (!pages[pageName]) pageName = 'home';
 
+    // Sayfa değiştirildiğinde takip et
+    if (window.trackVisit) {
+        window.trackVisit(pageName);
+    }
+
     container.style.opacity = '0';
     setTimeout(() => {
         container.innerHTML = pages[pageName];

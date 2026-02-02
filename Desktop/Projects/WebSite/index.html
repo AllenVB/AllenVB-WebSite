@@ -10,24 +10,29 @@
     
     <!-- Takip Kodu -->
     <script>
-      (function() {
-        // Ngrok terminalinde gördüğün "Forwarding" adresini buraya yapıştır
-        const API_URL = "https://collen-unlyrical-retributively.ngrok-free.dev/api/collector/track";
-        const MY_API_KEY = "745fc94c-ab14-4ed2-beb2-db4a32c990a5"; 
+      // Takip fonksiyonunu dışarıdan erişilebilir bir değişkene atayalım
+      window.trackVisit = function(pageName = null) {
+          const API_URL = "https://collen-unlyrical-retributively.ngrok-free.dev/api/collector/track";
+          const MY_API_KEY = "745fc94c-ab14-4ed2-beb2-db4a32c990a5"; 
 
-        fetch(API_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            apiKey: MY_API_KEY,
-            path: window.location.pathname,
-            referrer: document.referrer,
-            browser: navigator.userAgent
+          const path = pageName ? `/#${pageName}` : window.location.pathname;
+
+          fetch(API_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                  apiKey: MY_API_KEY,
+                  path: path, // Artık dinamik: /#about, /#projects vb.
+                  referrer: document.referrer,
+                  browser: navigator.userAgent
+              })
           })
-        })
-        .then(res => console.log("Veri başarıyla iletildi!"))
-        .catch(err => console.error("Hata:", err));
-      })();
+          .then(res => console.log(`İstatistik güncellendi: ${path}`))
+          .catch(err => console.error("Takip Hatası:", err));
+      };
+
+      // Sayfa ilk yüklendiğinde (Anasayfa girişi için) çalıştır
+      window.trackVisit();
     </script>
     <style>
         /* 3D Background Animations */
