@@ -24,7 +24,7 @@
                   apiKey: MY_API_KEY,
                   path: path, // Artık dinamik: /#about, /#projects vb.
                   referrer: document.referrer,
-                  browser: navigator.userAgent
+                  userAgent: navigator.userAgent
               })
           })
           .then(res => console.log(`İstatistik güncellendi: ${path}`))
