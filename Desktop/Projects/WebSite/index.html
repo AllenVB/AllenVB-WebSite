@@ -10,9 +10,12 @@
     
     <!-- Takip Kodu -->
     <script>
-      // Takip fonksiyonunu dışarıdan erişilebilir bir değişkene atayalım
       window.trackVisit = function(pageName = null) {
+          // console.log ile tetiklenip tetiklenmediğini kontrol edelim
+          console.log("Analiz tetiklendi, sayfa:", pageName || "anasayfa");
+
           const API_URL = "https://collen-unlyrical-retributively.ngrok-free.dev/api/collector/track";
+          const MY_API_KEY = "745fc94c-ab14-4ed2-beb2-db4a32c990a5"; 
 
           const path = pageName ? `/#${pageName}` : window.location.pathname;
 
@@ -20,21 +23,20 @@
               method: "POST",
               headers: { 
                   "Content-Type": "application/json",
-                  // KRİTİK: Ngrok'un "Visit Site" uyarısını otomatik geçer
                   "ngrok-skip-browser-warning": "true" 
               },
               body: JSON.stringify({
-                  apiKey: "745fc94c-ab14-4ed2-beb2-db4a32c990a5",
+                  apiKey: MY_API_KEY,
                   path: path,
                   referrer: document.referrer,
                   userAgent: navigator.userAgent
               })
           })
-          .then(res => console.log(`İstatistik güncellendi: ${path}`))
-          .catch(err => console.error("Takip Hatası:", err));
+          .then(res => console.log("API Yanıtı Geldi:", res.status))
+          .catch(err => console.error("POST Hatası:", err));
       };
 
-      // Sayfa ilk yüklendiğinde (Anasayfa girişi için) çalıştır
+      // İlk giriş kaydı
       window.trackVisit();
     </script>
     <style>

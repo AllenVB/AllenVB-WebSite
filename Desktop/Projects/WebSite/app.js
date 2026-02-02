@@ -187,17 +187,18 @@ function loadPage(pageName) {
     const container = document.getElementById('app-container');
     if (!pages[pageName]) pageName = 'home';
 
-    // Sayfa değiştirildiğinde takip et
-    if (window.trackVisit) {
+    // --- BURASI KRİTİK ---
+    if (typeof window.trackVisit === 'function') {
         window.trackVisit(pageName);
     }
+    // ---------------------
 
     container.style.opacity = '0';
     setTimeout(() => {
         container.innerHTML = pages[pageName];
         container.style.opacity = '1';
 
-        // Add event listeners to buttons
+        // Sayfa içindeki butonlar için dinleyiciler
         container.querySelectorAll('[data-page]').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
