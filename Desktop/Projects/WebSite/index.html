@@ -13,16 +13,19 @@
       // Takip fonksiyonunu dışarıdan erişilebilir bir değişkene atayalım
       window.trackVisit = function(pageName = null) {
           const API_URL = "https://collen-unlyrical-retributively.ngrok-free.dev/api/collector/track";
-          const MY_API_KEY = "745fc94c-ab14-4ed2-beb2-db4a32c990a5"; 
 
           const path = pageName ? `/#${pageName}` : window.location.pathname;
 
           fetch(API_URL, {
               method: "POST",
-              headers: { "Content-Type": "application/json" },
+              headers: { 
+                  "Content-Type": "application/json",
+                  // KRİTİK: Ngrok'un "Visit Site" uyarısını otomatik geçer
+                  "ngrok-skip-browser-warning": "true" 
+              },
               body: JSON.stringify({
-                  apiKey: MY_API_KEY,
-                  path: path, // Artık dinamik: /#about, /#projects vb.
+                  apiKey: "745fc94c-ab14-4ed2-beb2-db4a32c990a5",
+                  path: path,
                   referrer: document.referrer,
                   userAgent: navigator.userAgent
               })
